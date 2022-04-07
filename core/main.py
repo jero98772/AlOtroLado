@@ -16,8 +16,6 @@ import time
 
 from core.tools.tools import *
 
-#MAPNAME="tmp.html"
-#GENMAPFILE=TEMPLATEDIR+MAPNAME
 TEMPLATEDIR="templates/"
 MAPS="core/maps.py"
 MAPWEBADRESS="/maps/"
@@ -55,25 +53,19 @@ class webpage():
                 data=configData(DATAJSON).getData()
                 maps=configMap(data)
                 newPath=pathsX(data,"["+str(source)+"]", "["+str(target)+"]")
-                #newPath=pathsX(data,"[-75.6909483, 6.338773]", "[-75.5572602, 6.2612576]")
-                #nodes=pathsX(data,str(source),str(target)).dijkstra() nodes.getData()
                 newPath.dijkstraNoW()
                 nodesData=newPath.getData()
                 
-                #print(nodesData,str(source),str(target))
                 salt=str(datetime.datetime.now()).replace(" ","").replace("-","").replace(":","").replace(".","")
-                #maps.genMapMultlayer(GENMAPFILE,[maps.getPathMap(),maps.getnodesMap(),configMap.newPath(nodes.getData())])
                 fileName="map"+str(salt)+".html"
 
-                #writetxt(fileName,"")
                 configMap.newPath(nodesData)
                 layers=[maps.getPathMap(),maps.getnodesMap(),configMap.newPath(nodesData)]
                 maps.genMapMultlayer(MAPSDIR+fileName,layers)
                 serveMapCode=genPreview(fileName,"maps")
                 print(serveMapCode)
                 writetxt(MAPS,serveMapCode,"a")
-            #time.sleep(1)
-            return redirect(fileName)  
+                return redirect(fileName)  
         return render_template("index.html",msg=msg)
 
     @app.route("/about")
@@ -87,26 +79,6 @@ class webpage():
         data=json.dumps(readtxt(DATAJSON))
         response = app.response_class(response=data,mimetype='application/json')
         return response
-
-    #temporal web pages
-    @app.route("/config")
-    def config():
-        data=configData(DATAJSON).getData()
-        data.createNodes(data)
-        #play with algoritm
-        #data=configData(DATAJSON).getData()
-        #data=configData(DATACSVFILE)
-        #configData.clearAllDataJson(data.getData())
-        return render_template("config.html")
-    @app.route("/tmp")
-    def indextmp():
-        return render_template("tmp.html")
-    @app.route("/mapBase")
-    def webMapBase():
-        return render_template("mapBase.html")
-    @app.route("/map")
-    def webMap():
-        return render_template(MAPNAME)
 
 class configData:
     def __init__(self,file,sep=";"):
@@ -176,26 +148,17 @@ class pathsX(graphX):
         self._target=target
     def dijkstra(self):
         self._nodes=nx.dijkstra_path(self.graph, self._source, self._target, weight='weight')
-        #return path2df(self._nodes)
+
     def dijkstraNoW(self):
         self._nodes=nx.dijkstra_path(self.graph, self._source, self._target, weight=None)
-        #return path2df(self._nodes)
+
     def bellmanford(self):
         self._nodes=nx.shortest_path(self.graph, self._source, self._target, weight='weight', method='bellman-ford')
-        #return path2df(self._nodes)
+
     def getData(self):
-        """
-        path=deque()
-        for i in self._nodes:
-            path.append(eval(i))
-        """
         pathdf=pd.DataFrame([{"name":"path","path":[eval(i) for i in self._nodes]}])
         return pathdf
-#self._nodes=nx.dijkstra_path(Grafo, "[-75.6909483, 6.338773]", "[-75.5572602, 6.2612576]", weight=None)
-#self._nodes=nx.shortest_path(Grafo, "[-75.6909483, 6.338773]", "[-75.5705202, 6.2106275]", weight=None, method='bellman-ford')
-#nodes=nx.shortest_path(Grafo, "[-75.6909483, 6.338773]", "[-75.5705202, 6.2106275]", weight='weight', method='dijkstra')
-#nodes=nx.shortest_path(Grafo, "[-75.6909483, 6.338773]", "[-75.5705202, 6.2106275]", weight=None, method='dijkstra')
-
+        
 class configMap:
     def __init__(self,data):
 
@@ -253,7 +216,6 @@ class configMap:
         print("map"*50)
         view = pdk.ViewState(latitude=6.256405968932449, longitude= -75.59835591123756, pitch=40, zoom=12)
         mapCompleate = pdk.Deck(layers=layers, initial_view_state=view)
-        #mapCompleate.deck_widget.on_click(filter_by_viewport)
         mapCompleate.to_html(fileName)
     
     def getEmptyMap(self):return self.emptyMap
