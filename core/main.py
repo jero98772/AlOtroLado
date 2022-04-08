@@ -71,6 +71,9 @@ class webpage():
     @app.route("/about")
     def about():
         return render_template("about.html")
+    @app.route("/mapBase")
+    def webMapBase():
+        return render_template("mapBase.html")
     @app.route("/dotsdir.html")
     def dotsdir():
         return render_template("dotsdir.html")  

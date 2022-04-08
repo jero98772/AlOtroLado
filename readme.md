@@ -1,6 +1,6 @@
 # AlOtroLado
 
-![logo](logo)
+![logo](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/logo.jpg?raw=true)
 
 		al otro lado   
 
