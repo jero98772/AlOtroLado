@@ -1,6 +1,6 @@
 # AlOtroLado
 
-![logo](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/logo.jpg?raw=true)
+![logo](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/logo1.png?raw=true)
 
 		al otro lado   
 
@@ -40,7 +40,7 @@ En una página web para que se pueda distribuir mejor y darle más alcance, de n
 ### Descargar
 
 	git clone https://github.com/jero98772/AlOtroLado
-
+	
 ### Actualizar
 ejecuté en la carpeta del proyecto
 
@@ -59,3 +59,4 @@ después de instalarlo y ejecutar **python alOtroLado.py** el este va a lanzar u
 ### Screenshots
 ![map1](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/2022-02-23-112022_1920x1080_scrot.png?raw=true)
 ![mapdj](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/dijistra_ok.jpg?raw=true)
+![heatmap](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/photo1649630597.jpeg?raw=true)

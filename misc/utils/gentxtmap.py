@@ -1,8 +1,9 @@
 import pandas as pd
 import pydeck as pdk
+from ipywidgets import HTML
 import json
 
-data = pd.read_json("nodes_data.json")
+data = pd.read_json("data/nodes_data.json")
 
 view = pdk.ViewState(latitude=6.2564059689324, longitude= -75.5983559112375, pitch=20, zoom=15)
 
@@ -21,7 +22,7 @@ layer5 = pdk.Layer(
     pickable=True,
     get_position="node",
     get_text="name2",
-    get_size=14,
+    get_size=20,
     get_color=[255, 255, 255],
     get_angle=0,
 
@@ -42,4 +43,8 @@ layer2 = pdk.Layer(
 r = pdk.Deck(layers=[layer5,layer2], initial_view_state=view)
 #r = pdk.Deck(layers=[layer2], initial_view_state=view)
 
+r.deck_widget.on_click(filter_by_viewport)
+
+
+display(text)
 r.to_html('tmp.html')

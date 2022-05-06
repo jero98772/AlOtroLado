@@ -3,17 +3,19 @@ import pandas as pd
 import pydeck as pdk
 
 
-data = pd.read_json("graph_medellin_all_data.json")#.head(10000)
+data = pd.read_json("data_json.json")#.head(10000)
 Grafo = nx.Graph()
 
 source=""
 tarjet=""
-
+print(data["edges"])
+print(data["node"])
 for i in range(len(data)):
     node=data["node"][i]
-    weight=1-data["harassmentRisk"][i]
+    weight=data["weights"][i]
     #weight=(data["length"][i]+data["harassmentRisk"][i]/100)
-    Grafo.add_edge(str(data["path"][i][0]),str(data["path"][i][1]),weight=weight)
+
+    Grafo.add_edge(str(data["edges"][i][0]),str(data["edges"][i][1]),weight=weight)
     Grafo.add_node(str(node))
 
 #print(data.to_string())
@@ -23,7 +25,7 @@ for i in range(len(data)):
 o="Calle 10"
 print(data.set_index(["name"]).loc[o])
 d=""
-nodes=nx.dijkstra_path(Grafo, "[-75.6909483, 6.338773]", "[-75.5572602, 6.2612576]", weight=None)
+nodes=nx.dijkstra_path(Grafo, "[-75.5728593, 6.2115169]", "[-75.5728593, 6.2115169]", weight=None)
 #nodes=nx.shortest_path(Grafo, "[-75.6909483, 6.338773]", "[-75.5705202, 6.2106275]", weight='weight', method='dijkstra')
 #nodes=nx.shortest_path(Grafo, "[-75.6909483, 6.338773]", "[-75.5705202, 6.2106275]", weight=None, method='dijkstra')
 #nodes=nx.shortest_path(Grafo, "[-75.6909483, 6.338773]", "[-75.5705202, 6.2106275]", weight=None, method='bellman-ford')
@@ -61,9 +63,9 @@ for i in nodes:
 #print(data.head(5))
 print(data)
 
-pathdj=pd.DataFrame([{"name":"path","path":path}])
+pathdj=pd.DataFrame([{"name":"edges","edges":path}])
 print(pathdj)
-data = pd.read_json("nodes_datas.json")
+#data = pd.read_json("data/nodes_datas.json")
 
 view = pdk.ViewState(latitude=6.2564059689324, longitude= -75.5983559112375, pitch=20, zoom=15)
 layer4 = pdk.Layer(
@@ -73,7 +75,7 @@ layer4 = pdk.Layer(
     get_color=(0,15,205),
     width_scale=5,
     width_min_pixels=5,
-    get_path="path",
+    get_path="edges",
     get_width=5,
 )
 #https://deckgl.readthedocs.io/en/latest/event_handling.html
@@ -122,8 +124,8 @@ layer1 = pdk.Layer(
     get_color=(0,155,0),
     width_scale=2,
     width_min_pixels=1,
-    get_path="path",
+    get_path="edges",
     get_width=1,
 )
-r = pdk.Deck(layers=[], initial_view_state=view)
+r = pdk.Deck(layers=[layer1,layer4], initial_view_state=view)
 r.to_html('tmp.html')

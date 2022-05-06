@@ -25,38 +25,24 @@ def joinWebpage(direccions,webApp,actualapp,url=""):
     return site()
     
 def genPreview(name,path):
-  txt = f'\n\t@app.route("/{name}")\n\tdef {str(name[:-5]).replace("/","")}():\n\t\treturn render_template("{path}/{name}")'
-  return txt
+    txt = f'\n\t@app.route("/{name}")\n\tdef {str(name[:-5]).replace("/","")}():\n\t\treturn render_template("{path}/{name}")'
+    return txt
 
-def initMap(dataDir):
+def initMap(dataDir:str)->None:
+    """
+    initMap(dataDir:str)->None
+    create python file with code for add flask,like the code that generates genPreview 
+    """
     newCode = """from flask import Flask, render_template
 app = Flask(__name__)
 class maps():"""
     writetxt(dataDir,newCode)
     #tryng to move to emacs is ... a disasters with tabs 
-
-def filesInFolders(path,tag = ".html"):
-  folderFiles = os.listdir(path)
-  files = []
-  for i in folderFiles:
-    if i[len(tag)*-1:] != tag:
-      name =  [i+"/"+ii for ii in os.listdir(path+i)] 
-      files += name
-    else: 
-      files +=  [i]
-  return files
-
-def blogsNames(path,tag = ".html"):
-  blogs = os.listdir(path)
-  names = []
-  for i in blogs:
-    if i[len(tag)*-1:] == tag:
-      names.append(i[:len(tag)*-1])
-    else:
-      names.append(i)
-  return names
-  
-def validData(txt,dicts):
+def validData(txt:str,dicts:list)-> bool:
+  """
+  validData(txt:str,dicts:list)-> bool
+  check if data is valid, if character is in dicts is not valid
+  """
   tmp=False
   for i in txt:
     if not i in dicts:
@@ -65,4 +51,11 @@ def validData(txt,dicts):
     else:
       tmp=True
   return tmp
-#a in "asdf" yes, not flase, 1 in "asdfgh" ,no
+
+def readRealtime(name:str,sep=";"):
+  """
+  readRealtime(name:str,sep=";":str)) , is a genteretor return row of csv at iteration 
+  """
+  with open(name, 'r') as file:
+    for i in file.readlines():
+      yield i.split(sep)

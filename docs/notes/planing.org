@@ -1,0 +1,64 @@
+ * code planing
+  
+* web server
+  
+** index
+   
+** new path map
+   
+** about web page
+   
+** json dir
+   
+** configuration play(optional)
+  
+* docs
+  
+** readme
+   
+** logo
+   
+** video
+   
+* TODO frist delivery
+
+*** 1
+    generate map and redirect to that
+  
+*** 2
+    about
+
+* TODO second delivery
+    
+*** 0
+names
+
+data clear
+mean in weigth
+
+*** 3
+    geocodig
+    or
+    dots hyperlinks
+
+*** 4
+own graph
+
+*** 5
+optimise
+
+*** 6
+    outs dijistra
+    1 length  own graph  
+    1 length nx
+    1 risk own graph
+    1 risk nx
+    1 risk*length own graph
+    1 risk*length nx
+
+* Todo
+*** DONE data
+*** implementatios dijikstra
+*** DONE optimisations
+*** DONE info web page and test cases
+*
