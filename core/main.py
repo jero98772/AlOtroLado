@@ -12,7 +12,6 @@ import networkx as nx
 import os
 import json
 import datetime
-import time
 
 from core.tools.tools import *
 
