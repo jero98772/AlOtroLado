@@ -59,7 +59,7 @@ después de instalarlo y ejecutar **python alOtroLado.py** el este va a lanzar u
 ### Reconocimientos
 
 ganador de inevntiva eafit 2022-1
-![premio](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/premio?raw=true)
+![premio](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/premio.jpeg?raw=true)
 
 ### Screenshots
 ![map1](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/2022-02-23-112022_1920x1080_scrot.png?raw=true)
