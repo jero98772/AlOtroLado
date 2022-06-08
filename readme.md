@@ -46,15 +46,20 @@ ejecuté en la carpeta del proyecto
 
 	git pull
 
-### instalar
+### Instalar
 
 ejecute: 
 
 	python setup.py install
 
-### como usarlo
+### Como usarlo
 
 después de instalarlo y ejecutar **python alOtroLado.py** el este va a lanzar una página en [localhost:9600](http://localhost:9600/)
+
+### Reconocimientos
+
+ganador de inevntiva eafit 2022-1
+![premio](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/premio?raw=true)
 
 ### Screenshots
 ![map1](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/2022-02-23-112022_1920x1080_scrot.png?raw=true)
