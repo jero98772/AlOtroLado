@@ -255,7 +255,8 @@ class graphX():
         self.graph=nx.Graph()
         for i in range(len(data)):
             node=data["node"][i]
-            weight=(data["length"][i])
+            weight=(data["harassmentRisk"][i]+0.5)*data["length"][i]
+            #weight=(data["length"][i])
             self.graph.add_edge(str(data["edges"][i][0]),str(data["edges"][i][1]),weight=weight)
             self.graph.add_node(str(node))
 
