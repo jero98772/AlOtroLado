@@ -6,7 +6,7 @@
 
 página web para calcular un recorrido con menos peligro en la ciudad de Medellin, mediante los datos abiertos de Medellin logra identificar que lugares son más peligrosos 
 
-**videotutorial** [here](---)
+**video** [video](https://www.youtube.com/watch?v=f4UW539DhlQ)
 
 ### Problematica y por que se hiso:
 
