@@ -8,7 +8,7 @@ página web para calcular un recorrido con menos peligro en la ciudad de Medelli
 
 **video** 
 
-[![video](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/video.jpeg?raw=true)](https://www.youtube.com/watch?v=f4UW539DhlQ "alotrolado")
+[![video](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/video.png?raw=true)](https://www.youtube.com/watch?v=f4UW539DhlQ "alotrolado")
 
 
 ### Problematica y por que se hiso:
