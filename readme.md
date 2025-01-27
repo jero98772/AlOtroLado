@@ -2,6 +2,13 @@
 
 ![logo](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/logo1.png?raw=true)
 
+
+**Translations in:**
+[Spanish](https://github.com/jero98772/AlOtroLado/blob/main/docs/readme_es.md)
+[Deutsch](https://github.com/jero98772/AlOtroLado/blob/main/docs/readme_ge.md) 
+[Русский](https://github.com/jero98772/AlOtroLado/blob/main/docs/readme_ru.md)
+
+
 **To the Other Side**  
 
 The name is from a Colombian philosopher, Fernando González, who named his things like... his thesis work "another thesis", his house "another part", that's why this is called the other side "al otro lado" in spanish

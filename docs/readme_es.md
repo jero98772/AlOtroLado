@@ -5,7 +5,7 @@
 		al otro lado   
 
 **Traducciones en:**
-[English](https://github.com/jero98772/AlOtroLado/blob/main/readme_es.md)
+[English](https://github.com/jero98772/AlOtroLado/blob/main/docs/readme.md)
 [Deutsch](https://github.com/jero98772/AlOtroLado/blob/main/docs/readme_ge.md) 
 [Русский](https://github.com/jero98772/AlOtroLado/blob/main/docs/readme_ru.md)
 
