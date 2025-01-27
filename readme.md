@@ -2,69 +2,96 @@
 
 ![logo](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/logo1.png?raw=true)
 
-		al otro lado   
+**To the Other Side**  
 
-página web para calcular un recorrido con menos peligro en la ciudad de Medellin, mediante los datos abiertos de Medellin logra identificar que lugares son más peligrosos 
+The name is from a Colombian philosopher, Fernando González, who named his things like... his thesis work "another thesis", his house "another part", that's why this is called the other side "al otro lado" in spanish
 
-**video** 
+A web page designed to calculate safer routes in the city of Medellín. Using Medellín's open data, it identifies the most dangerous areas.
 
-[![video](https://raw.githubusercontent.com/jero98772/AlOtroLado/main/misc/img/video.png)](https://www.youtube.com/watch?v=f4UW539DhlQ "alotrolado")
+**Video**
 
+[![video](https://raw.githubusercontent.com/jero98772/AlOtroLado/main/misc/img/video.png)](https://www.youtube.com/watch?v=f4UW539DhlQ "AlOtroLado")
 
-### Problematica y por que se hiso:
+---
 
-una tarea de la universidad y sacarle más provecho e intentar ganar inventiva. 
+### Problem and Why It Was Made:
 
-la solución utópica que plantea la tarea es:   
+This started as a university assignment but aimed to go further by adding creativity and utility.  
 
-		"como hay cierto peligro en x lugares de la ciudad, se busca eliminarlo"
+The idealized solution proposed in the assignment was:
 
-algo que no es posible
-		
-		"...se puede lograr  reducirlo generando una ruta por un camino teniendo en cuenta estos lugares peligrosos para que el usuario los evitándolos"
+> "Since certain places in the city are dangerous, the goal is to eliminate the danger."
 
-la "solución" real requiere un cambio social
+However, this isn't realistic.
 
-		Las soluciones no siempre funcionan, funciona mejor como optimizaciones, y algunas veces pensamos que algo es una solucion,es más como un nuevo problema. Son0p
+> "...But it is possible to reduce the danger by generating a route that avoids these dangerous areas, helping users stay away from them."
 
-Esto solo hace ver este problema menos feo.
+The "real" solution, however, requires a societal change.  
 
-**según lo planteado, esto no sirve ¿para qué se hizo?**
+> Solutions don’t always work perfectly. They work better as optimizations. Sometimes, what we think is a solution is actually just a new problem.  
 
-Se hizo algo que es lo que importa, una acción vale más que mil palabras, cualquiera puede hablar y hacer, pero muy pocos hacen algo y solamente se quedan quejándose.
+This project aims to make the issue appear less daunting.  
 
-Dentro del proyecto estuvo presente esta discusión social, y por eso hizo algo accesible.
+---
 
-Código abierto para que los que quieran hagan lo que quieran con esto, pero hagan algo para que sea más fácil generar conciencia del problema y avances en él.
+**If it doesn't solve the problem, why was it created?**
 
-En una página web para que se pueda distribuir mejor y darle más alcance, de nada sirve que una sola persona tenga acceso a esto.
+Because doing something matters. One action is worth more than a thousand words.  
+Anyone can talk about change, but very few actually do something—most just complain.
 
+This project embraced that social discussion. That’s why it was made accessible.  
 
-### Descargar
+It’s open-source so that others can use or build on it as they see fit. But the ultimate goal is to raise awareness of the problem and contribute to progress.
 
-	git clone https://github.com/jero98772/AlOtroLado
-	
-### Actualizar
-ejecuté en la carpeta del proyecto
+It’s also a web-based tool for better distribution and reach—because it’s pointless if only one person has access to it.
 
-	git pull
+---
 
-### Instalar
+### Download  
 
-ejecute: 
+```bash
+git clone https://github.com/jero98772/AlOtroLado
+```
 
-	python setup.py install
+### Update  
 
-### Como usarlo
+Run this in the project folder:
 
-después de instalarlo y ejecutar **python alOtroLado.py** el este va a lanzar una página en [localhost:9600](http://localhost:9600/)
+```bash
+git pull
+```
 
-### Reconocimientos
+### Install  
 
-ganador de inevntiva eafit 2022-1
-![premio](https://raw.githubusercontent.com/jero98772/AlOtroLado/main/misc/img/premio.jpeg)
+Run:
 
-### Screenshots
-![map1](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/2022-02-23-112022_1920x1080_scrot.png?raw=true)
-![mapdj](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/dijistra_ok.jpg?raw=true)
-![heatmap](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/photo1649630597.jpeg?raw=true)
+```bash
+python setup.py install
+```
+
+---
+
+### How to Use
+
+After installing, run:
+
+```bash
+python alOtroLado.py
+```
+
+This will launch a webpage at [localhost:9600](http://localhost:9600/).
+
+---
+
+### Recognitions  
+
+Winner of the **EAFIT Inventive Challenge 2022-1**  
+![award](https://raw.githubusercontent.com/jero98772/AlOtroLado/main/misc/img/premio.jpeg)
+
+---
+
+### Screenshots  
+
+![map1](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/2022-02-23-112022_1920x1080_scrot.png?raw=true)  
+![mapdj](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/dijistra_ok.jpg?raw=true)  
+![heatmap](https://github.com/entifais/ST0245-Plantilla/blob/master/proyecto/codigo/alOtroLado/misc/img/photo1649630597.jpeg?raw=true)  
